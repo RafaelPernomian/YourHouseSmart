@@ -1,0 +1,75 @@
+.vantagens {
+  background-color: var(--cor-1);
+  padding-top: 60px;
+  padding-bottom: 120px;
+}
+
+.vantagens h2 {
+  padding-bottom: 40px;
+}
+
+.vantagens ul {
+  display: flex;
+  padding: 0 20px 20px 20px;
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  overflow-x: auto;
+}
+
+.vantagens li {
+  flex: 1;
+  min-width: 280px;
+}
+
+.vantagens img {
+  display: block;
+  margin-bottom: 16px;
+  max-height: 500px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.vantagens h3 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.vantagens h3::before {
+  content: "";
+  display: inline-block;
+  background-color: var(--cor-p1);
+  height: 8px;
+  width: 12px;
+  margin-right: 8px;
+  transition: width 0.2s;
+}
+
+.vantagens li:hover h3::before {
+  width: 24px;
+}
+
+.vantagens li:hover img {
+  transform: scale(1.005);
+}
+
+.vantagens li p {
+  padding-left: 20px;
+}
+
+@media (max-width: 800px) {
+  .vantagens {
+    background-color: var(--cor-3);
+    padding-bottom: 60px;
+  }
+  .vantagens img {
+    height: 350px;
+  }
+  .vantagens ul {
+    gap: 20px;
+  }
+  .vantagens li p {
+    font-size: 0.95rem;
+  }
+}

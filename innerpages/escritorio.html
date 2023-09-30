@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Uma central para toda automação que sua casa precisa e possui.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your House, Smart</title>
+
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="../css/style.css" as="style">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+
+<body>
+  <header class="header-bg">
+    <div class="header container">
+      <a class="logo" href="../">
+        <img src="../img/icones/logo.svg" width="40px" alt="icone casa">
+        <h1 class="cor-10 font-1-xl">YOUR HOUSE, SMART</h1>
+      </a>
+      <nav aria-label="primaria">
+        <ul class="header-menu font-1-m cor-10">
+          <li><a href="../faq.html"><span>FAQ</span></a></li>
+          <li class="cor-p1"><a href="../central.html"><b>Central de Controle</b></a></li>
+          <li><a href="#contato"><span>Contato</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="comodos-bg">
+    <h2 class="font-1-xl cor-p1">E S C R I T Ó R I O</h2>
+
+    <ul class="controls container">
+      <li class="device lampada">
+        <h2 class="cor-11 font-1-xl">iluminação geral</h2>
+        <div class="device-status">
+          <button id="lightButton" class="botao-resetado"><img id="lightStatus" class="device-icon" src="../img/lampadaapagada.png" alt="apagada"></button>
+        </div>
+      </li>
+
+      <li class="device">
+        <h2 class="cor-11 font-1-xl">iluminação auxiliar</h2>
+        <div class="device-status">
+          <button id="lightaltButton" class="botao-resetado"><img id="lightaltStatus" class="device-icon" src="../img/luzapagada.png" alt="apagada"></button>
+        </div>
+      </li>
+
+      <li class="device temperatura">
+        <h2 class="cor-11 font-1-xl">temperatura</h2>
+        <div class="device-status">
+          <button id="airButton" class="botao-resetado"><img id="airStatus" class="device-icon" src="../img/airoff.png" alt="desligado"></button>
+        </div>
+        <div class="temperaturaContainer">
+          <input class="scroll" type="range" id="temperatureRange" min="0" max="40" step="1" value="20">
+          <span id="temperatureValue" class="device-value font-1-l cor-11">20°C</span>
+        </div>
+      </li>
+
+      <li class="device">
+        <h2 class="cor-11 font-1-xl">cortinas</h2>
+        <div class="device-status">
+          <button id="curtainsButton" class="botao-resetado"><img id="curtainsStatus" class="device-icon" src="../img/cortinafechada.png" alt="fechada"></button>
+        </div>
+      </li>
+
+      <li class="device">
+        <h2 class="cor-11 font-1-xl">computador</h2>
+        <div class="device-status">
+          <button id="computerButton" class="botao-resetado"><img id="computerStatus" class="device-icon" src="../img/computerOff.png" alt="desligado"></button>
+        </div>
+      </li>
+
+      <li class="device">
+        <h2 class="cor-11 font-1-xl">projetor</h2>
+        <div class="device-status">
+          <button id="projetorButton" class="botao-resetado"><img id="projetorStatus" class="device-icon" src="../img/projetoroff.png" alt="desligado"></button>
+        </div>
+      </li>
+
+    </ul>
+  </main>
+
+  <footer id="contato" class="footer-bg">
+    <div class="footer container">
+      <a href="./">
+        <h1 class="cor-1 font-1-xl">YOUR HOUSE, SMART</h1>
+      </a>
+      <div class="footer-contato">
+        <h3 class="font-2-l-b cor-0">Contato</h3>
+        <ul class="font-2-m cor-5">
+          <li><a href="tel:+5518998030255">+51 18 99803-0255</a></li>
+          <li><a href="mailto:paulo_pernomian@outlook.com">paulo_pernomian@outlook.com</a></li>
+          <li>Rua Ângelo Dal Ponte, 100 - Eldorado II</li>
+          <li>Adamantina - SP</li>
+        </ul>
+        <div class="footer-redes">
+          <a href="">
+            <img src="../img/redes/instagram.svg" width="32" height="32" alt="Instagram">
+          </a>
+          <a href="./">
+            <img src="../img/redes/facebook.svg" width="32" height="32" alt="Facebook">
+          </a>
+          <a href="https://www.linkedin.com/in/paulo-rafael-pernomian-73063721a/">
+            <img src="../img/redes/linkedin.svg" width="32" height="32" alt="Linkedin">
+          </a>
+        </div>
+      </div>
+      <p class="footer-copy font-2-m cor-6">Your House, Smart © Alguns direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+  <script src="../js/sketchEscritorio.js"></script>
+
+</body>
+
+</html>

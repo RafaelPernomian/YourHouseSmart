@@ -1,0 +1,22 @@
+/* PRIMEIROS A CARREGAR */
+@import "./utilidades/cores.css";
+@import "./utilidades/tipografia.css";
+@import "./utilidades/componentes.css";
+
+/* GLOBAL */
+@import "./global/global.css";
+@import "./global/header.css";
+@import "./global/footer.css";
+
+/* HOME */
+@import "./home/apresentacao.css";
+@import "./home/vantagens.css";
+
+/* CENTRAL */
+@import "./central/central.css";
+
+/* FAQ */
+@import "./FAQ/faq.css";
+
+/* INNER PAGES */
+@import "./innerpages/comodos.css";
