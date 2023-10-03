@@ -175,6 +175,9 @@ input[type="range"]:focus::-moz-range-thumb {
     grid-template-columns: repeat(1, 1fr);
     padding-bottom: 0px;
   }
+  .controls li:nth-child(-n + 3):not(.oneLine) {
+    border-bottom: 1px solid var(--cor-p2);
+  }
   .controls li {
     border-left: none;
     border-right: none;
