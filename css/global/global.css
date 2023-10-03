@@ -28,7 +28,7 @@ a {
 img {
   max-width: 100%;
   height: auto;
-  display: block;
+  display: inline-block;
 }
 
 img[src$=".jpg"] {
