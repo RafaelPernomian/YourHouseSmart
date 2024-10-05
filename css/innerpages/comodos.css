@@ -83,10 +83,11 @@ input[type="range"] {
   appearance: none;
   background: transparent;
   cursor: pointer;
-  width: 20rem;
+  width: 100%; /* Ajuste a largura para 100% do container */
+  max-width: 20rem; /* Limite a largura máxima */
 }
 
-/* Removendo o foco padrao */
+/* Removendo o foco padrão */
 input[type="range"]:focus {
   outline: none;
 }
@@ -189,5 +190,18 @@ input[type="range"]:focus::-moz-range-thumb {
   .center {
     grid-column: auto;
     border-left: 1px solid var(--cor-p2);
+  }
+}
+
+@media (max-width: 400px) {
+  .controls {
+    padding: 10px; /* Adiciona padding para evitar overflow */
+  }
+  .scroll {
+    width: 100%; /* Garante que o input range ocupe toda a largura do container */
+    max-width: 90%; /* Ajuste conforme necessário para evitar overflow */
+  }
+  .device-icon {
+    height: 150px; /* Reduz o tamanho do ícone para caber melhor em telas menores */
   }
 }
