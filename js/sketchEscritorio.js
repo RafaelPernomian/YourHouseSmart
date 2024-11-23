@@ -1,27 +1,39 @@
-let lightOn = true;
-let lightaltOn = true;
-let airOn = true;
+let lightOn = false;
+let lightaltOn = false;
+let airOn = false;
 let temperature = 20;
-let curtainsOpen = true;
-let computerOn = true;
-let projetorOn = true;
-let tvOn = true;
+let curtainsOpen = false;
+let computerOn = false;
+let projetorOn = false;
+let tvOn = false;
 let status = document.getElementById("status");
 
 function toggleLight() {
-  lightOn = !lightOn;
-  const lightStatus = document.getElementById("lightStatus");
-  const imageOn = "../img/lampadaacesa.png";
-  const imageOff = "../img/lampadaapagada.png";
-  lightStatus.src = lightOn ? imageOff : imageOn;
+  fetch("http://localhost:3000/toggle-light")
+    .then((response) => response.text())
+    .then((data) => {
+      console.log(data);
+      lightOn = !lightOn;
+      const lightStatus = document.getElementById("lightStatus");
+      const imageOn = "../img/lampadaacesa.png";
+      const imageOff = "../img/lampadaapagada.png";
+      lightStatus.src = lightOn ? imageOn : imageOff;
+    })
+    .catch((error) => console.error("Erro ao enviar comando:", error));
 }
 
 function toggleLightalt() {
-  lightaltOn = !lightaltOn;
-  const lightaltStatus = document.getElementById("lightaltStatus");
-  const imageOn = "../img/luzacesa.png";
-  const imageOff = "../img/luzapagada.png";
-  lightaltStatus.src = lightaltOn ? imageOff : imageOn;
+  fetch("http://localhost:3000/toggle-lightalt")
+    .then((response) => response.text())
+    .then((data) => {
+      console.log(data);
+      lightaltOn = !lightaltOn;
+      const lightaltStatus = document.getElementById("lightaltStatus");
+      const imageOn = "../img/luzacesa.png";
+      const imageOff = "../img/luzapagada.png";
+      lightaltStatus.src = lightaltOn ? imageOn : imageOff;
+    })
+    .catch((error) => console.error("Erro ao enviar comando:", error));
 }
 
 function toggleAir() {
@@ -29,37 +41,61 @@ function toggleAir() {
   const airStatus = document.getElementById("airStatus");
   const imageOn = "../img/airon.png";
   const imageOff = "../img/airoff.png";
-  airStatus.src = airOn ? imageOff : imageOn;
+  airStatus.src = airOn ? imageOn : imageOff;
 }
 
 function setTemperature(value) {
-  temperature = value;
-  const temperatureValue = document.getElementById("temperatureValue");
-  temperatureValue.textContent = temperature + "°C";
+  fetch(`http://localhost:3000/set-temperature/${value}`)
+    .then((response) => response.text())
+    .then((data) => {
+      console.log(data);
+      temperature = value;
+      const temperatureValue = document.getElementById("temperatureValue");
+      temperatureValue.textContent = temperature + "°C";
+    })
+    .catch((error) => console.error("Erro ao enviar comando:", error));
 }
 
 function toggleCurtains() {
-  curtainsOpen = !curtainsOpen;
-  const curtainsStatus = document.getElementById("curtainsStatus");
-  const imageOn = "../img/cortinaaberta.png";
-  const imageOff = "../img/cortinafechada.png";
-  curtainsStatus.src = curtainsOpen ? imageOff : imageOn;
+  fetch("http://localhost:3000/toggle-curtains")
+    .then((response) => response.text())
+    .then((data) => {
+      console.log(data);
+      curtainsOpen = !curtainsOpen;
+      const curtainsStatus = document.getElementById("curtainsStatus");
+      const imageOn = "../img/cortinaaberta.png";
+      const imageOff = "../img/cortinafechada.png";
+      curtainsStatus.src = curtainsOpen ? imageOn : imageOff;
+    })
+    .catch((error) => console.error("Erro ao enviar comando:", error));
 }
 
 function toggleComputer() {
-  computerOn = !computerOn;
-  const computerStatus = document.getElementById("computerStatus");
-  const imageOn = "../img/computerOn.png";
-  const imageOff = "../img/computerOff.png";
-  computerStatus.src = computerOn ? imageOff : imageOn;
+  fetch("http://localhost:3000/toggle-computer")
+    .then((response) => response.text())
+    .then((data) => {
+      console.log(data);
+      computerOn = !computerOn;
+      const computerStatus = document.getElementById("computerStatus");
+      const imageOn = "../img/computerOn.png";
+      const imageOff = "../img/computerOff.png";
+      computerStatus.src = computerOn ? imageOn : imageOff;
+    })
+    .catch((error) => console.error("Erro ao enviar comando:", error));
 }
 
 function toggleProjetor() {
-  projetorOn = !projetorOn;
-  const projetorStatus = document.getElementById("projetorStatus");
-  const imageOn = "../img/projetoron.png";
-  const imageOff = "../img/projetoroff.png";
-  projetorStatus.src = projetorOn ? imageOff : imageOn;
+  fetch("http://localhost:3000/toggle-projector")
+    .then((response) => response.text())
+    .then((data) => {
+      console.log(data);
+      projetorOn = !projetorOn;
+      const projetorStatus = document.getElementById("projetorStatus");
+      const imageOn = "../img/projetoron.png";
+      const imageOff = "../img/projetoroff.png";
+      projetorStatus.src = projetorOn ? imageOn : imageOff;
+    })
+    .catch((error) => console.error("Erro ao enviar comando:", error));
 }
 
 function toggleTV() {
